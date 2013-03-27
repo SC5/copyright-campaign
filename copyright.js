@@ -1,7 +1,7 @@
 function hideBox() {
     $("#copyright-campaign-box").hide();
     if(typeof(Storage)!=="undefined") {
-        localStorage.boxClosed = true;
+        //localStorage.boxClosed = true; // removed for testing
     }
 }
 
