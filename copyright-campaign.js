@@ -1,7 +1,7 @@
 var copyrightCampaign = function(options) {
     options = typeof options !== 'undefined' ? options : { onBlackoutDayOnly: false, showOnlyOnce: true };
     var today = new Date();
-    if (!(today.getDate() == 27 && today.getMonth() == 3) && options["onBlackoutDayOnly"]) {
+    if (!(today.getDate() == 23 && today.getMonth() == 3) && options["onBlackoutDayOnly"]) {
         return;
     }
 
