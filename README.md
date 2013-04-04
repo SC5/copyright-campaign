@@ -6,11 +6,21 @@ Osallistu kampanjaan lisäämällä seuraava koodi sivullesi:
 ```html
 <script type="text/javascript" src="http://sc5.github.com/copyright-campaign/copyright-campaign.js" charset="UTF-8"></script>
 <script>
-copyrightCampaign({
-  onBlackoutDayOnly: true,
-  showOnlyOnce: true
-});
+copyrightCampaign();
 </script>
 ```
 
-Halutessasi voit muuttaa parametrien onBlackoutDayOnly ja showOnlyOnce arvoksi false.
+Voit halutessasi kustomoida widgetin toimintaa parametreilla:
+
+```html
+<script type="text/javascript" src="http://sc5.github.com/copyright-campaign/copyright-campaign.js" charset="UTF-8"></script>
+<script>
+copyrightCampaign({ onBlackoutDayOnly: true,
+                    showOnlyOnce: true,
+                    title: 'Järkeä<br>tekijänoikeuslakiin?',
+                    bigText: 'Allekirjoita <a href="https://www.kansalaisaloite.fi/fi/aloite/70">kansalaisaloite kohtuullisemman tekijänoikeuslain puolesta</a>.',
+                    smallText: 'Katso myös: <a href="#">Internetin musta päivä 23.4.</a>'});
+</script>
+```
+
+Jos muutat tekstejä, testaa että layout pysyy ehjänä.
