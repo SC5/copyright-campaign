@@ -5,7 +5,7 @@ var copyrightCampaign = function(options) {
     }
 
     setDefaultOption(options, {});
-    setDefaultOption("onBlackoutDayOnly", true);
+    setDefaultOption("onCampaignDayOnly", true);
     setDefaultOption("showOnlyOnce", true);
     setDefaultOption("title", 'Järkeä<br>tekijänoikeuslakiin?');
     setDefaultOption("bigText", 'Allekirjoita <a href="https://www.kansalaisaloite.fi/fi/aloite/70">kansalaisaloite kohtuullisemman tekijänoikeuslain puolesta</a>.');
@@ -14,7 +14,7 @@ var copyrightCampaign = function(options) {
     console.log(options);
 
     var today = new Date();
-    if (!(today.getDate() == 23 && today.getMonth() == 3) && options["onBlackoutDayOnly"]) {
+    if (!(today.getDate() == 23 && today.getMonth() == 3) && options["onCampaignDayOnly"]) {
         return;
     }
 

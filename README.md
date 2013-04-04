@@ -15,7 +15,7 @@ Voit halutessasi kustomoida widgetin toimintaa parametreilla:
 ```html
 <script type="text/javascript" src="http://sc5.github.com/copyright-campaign/copyright-campaign.js" charset="UTF-8"></script>
 <script>
-copyrightCampaign({ onBlackoutDayOnly: true,
+copyrightCampaign({ onCampaignDayOnly: true,
                     showOnlyOnce: true,
                     title: 'Järkeä<br>tekijänoikeuslakiin?',
                     bigText: 'Allekirjoita <a href="https://www.kansalaisaloite.fi/fi/aloite/70">kansalaisaloite kohtuullisemman tekijänoikeuslain puolesta</a>.',
