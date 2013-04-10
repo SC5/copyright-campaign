@@ -40,7 +40,7 @@ var copyrightCampaign = function(options) {
 
             $("head").prepend(widgetStyle);
 
-            var widgetElement = '<div id="copyright-campaign-box"><div class="inner-campaign-box";><a href="#" id="corner-close-button" class="close-copyright-campaign-box" style="color:#ffffff">Sulje</a><div class="campaign-text-content"><h1>'+options.title+'</h1><div>'+options.smallText+'</div><div class="subscribe">'+options.bigText+'</div><div id="subscriptions">Jo <b><span id="subscriptionCount"></span></b> allekirjoitusta!</div><div id="closeCampaignText"><a href="#" class="close-copyright-campaign-box">Sulje</a></div></div><div class="credits"><a href="https://github.com/SC5/copyright-campaign/">Code</a> by <a href="http://sc5.io">SC5</a></div></div></div>';
+            var widgetElement = '<div id="copyright-campaign-box"><div class="inner-campaign-box";><a href="#" id="corner-close-button" class="close-copyright-campaign-box" style="color:#ffffff">Sulje</a><div class="campaign-text-content"><h1>'+options.title+'</h1><div>'+options.smallText+'</div><div class="subscribe">'+options.bigText+'</div><div id="subscriptions">Jo <span id="subscriptionCount"><b></b></span> allekirjoitusta!</div><div id="closeCampaignText"><a href="#" class="close-copyright-campaign-box">Sulje</a></div></div><div class="credits"><a href="https://github.com/SC5/copyright-campaign/">Code</a> by <a href="http://sc5.io">SC5</a></div></div></div>';
             $(document.body).append(widgetElement);
 
             function hideBox() {
@@ -66,7 +66,7 @@ var copyrightCampaign = function(options) {
 
             $.getJSON("https://www.kansalaisaloite.fi/api/v1/initiatives/70?jsonp=?").done(function(data) {
                     if (data.supportCount) {
-                        $("#subscriptionCount").html(data.supportCount);
+                        $("#subscriptionCount b").html(data.supportCount);
                         $("#subscriptions").show();
                     }
             });
