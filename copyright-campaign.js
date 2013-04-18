@@ -22,9 +22,9 @@ var copyrightCampaign = function(options) {
         script_tag.setAttribute("src",
           "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js");
         script_tag.onload = main; // Run main() once jQuery has loaded
-        script_tag.onreadystatechange = function () { // Same thing but for IE
+        /*script_tag.onreadystatechange = function () { // Same thing but for IE
           if (this.readyState == 'complete' || this.readyState == 'loaded') main();
-        }
+        }*/
         document.getElementsByTagName("head")[0].appendChild(script_tag);
     } else {
         main();
