@@ -42,8 +42,8 @@ var copyrightCampaign = function(options) {
             $(document.body).append(widgetElement);
 
             function hideBox() {
-                //$("#copyright-campaign-box").hide();
-                $("#copyright-campaign-box").css({top:"-9999px", left:"-9999px", right:"-9999px",bottom:"-9999px"});
+                $("#copyright-campaign-box").hide();
+                //$("#copyright-campaign-box").css({top:"-9999px", left:"-9999px", right:"-9999px",bottom:"-9999px"});
                 if(options["showOnlyOnce"] && typeof(Storage)!=="undefined") {
                     localStorage.boxClosed = true;
                 }
