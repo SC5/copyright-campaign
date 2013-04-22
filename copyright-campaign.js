@@ -12,7 +12,7 @@ var copyrightCampaign = function(options) {
     setDefaultOption("smallText", 'Yhdessä voimme tehdä Suomen tekijänoikeuslaista reilumman kuluttajille, tekijöille ja uusia palveluita kehittäville yrityksille.');
 
     var today = new Date();
-    if (!(today.getDate() == 23 && today.getMonth() == 3) && options["onCampaignDayOnly"]) {
+    if (!(today.getDate() == 23 && today.getMonth() + 1 == 4) && options["onCampaignDayOnly"]) {
         return;
     }
 
@@ -43,7 +43,6 @@ var copyrightCampaign = function(options) {
 
             function hideBox() {
                 $("#copyright-campaign-box").hide();
-                //$("#copyright-campaign-box").css({top:"-9999px", left:"-9999px", right:"-9999px",bottom:"-9999px"});
                 if(options["showOnlyOnce"] && typeof(Storage)!=="undefined") {
                     localStorage.boxClosed = true;
                 }
